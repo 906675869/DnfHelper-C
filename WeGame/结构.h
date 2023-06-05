@@ -7,6 +7,12 @@ struct 坐标型 {
 	DWORD z;
 };
 
+struct 区域型
+{
+	坐标型 区域;
+	坐标型 位置;
+};
+
 struct 地图数据
 {
 	CHAR* 地图名称;

@@ -1,7 +1,24 @@
 #pragma once
 #include "结构.h"
+#include "数组.h"
 
 // 游戏地图
+
+地图型 获取数据();
+
+int 整理坐标(vector<坐标型> 模拟走法, vector<坐标型>& 真实走法);
+
+void 显示地图(vector<vector<路线型>> 地图数组, int 地图宽度, int 地图高度, vector<vector<路线型>>& 地图标签);
+
+void 路径算法(vector<vector<路线型>> 地图标签, 坐标型 地图起点, 坐标型 地图终点, int 地图宽度, int 地图高度, vector<坐标型>& 走法数组);
+
+int 获取走法(vector<int> 地图通道, int 地图宽度, int 地图高度, 坐标型 起点坐标, 坐标型 终点坐标, vector<坐标型>& 真实走法);
+
+void 生成地图(int 地图宽度, int 地图高度, vector<int> 地图通道, vector<vector<路线型>>& 地图路线);
+
+bool 方向判断(int 通向, int 方向);
+
+int 计算方向(坐标型 当前, 坐标型 下个);
 
 地图数据 寻路_地图数据();
 

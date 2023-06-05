@@ -3,6 +3,8 @@
 
 #include "读写.h"
 #include "游戏Call.h"
+#include "引用.h"
+#include "结构.h"
 
 static ByteArr packData;
 
@@ -198,5 +200,183 @@ VOID 组包移动(int 大地图ID, int 小地图ID, int 城镇X坐标, int 城镇Y坐标)
 	加密Call(2, 2);
 	加密Call(0, 4);
 	加密Call(0, 1);
+	发包Call();
+}
+
+
+void 组包卖物(int 物品位置, int 物品数量)
+{
+	int 商店编号, 校验数值;
+	商店编号 = 317;
+	校验数值 = 物品位置 + 物品数量;
+	校验数值 = 校验数值 * 2 + 1;
+	if (物品数量 == NULL)
+	{
+		物品数量 = 1;
+	}
+	缓冲Call(22);
+	数值Call(0, 1);
+	数值Call(物品位置, 2);
+	数值Call(物品数量, 4);
+	数值Call(商店编号, 4);
+	数值Call(校验数值, 4);
+	数值Call(27, 4);
+	发包Call();
+}
+
+
+void 数值Call(LONGLONG 地址, int 长度)
+{
+	LONGLONG* pSendvalue = &地址;
+	秘钥Call((LONGLONG)pSendvalue, 长度);
+}
+
+void 秘钥Call(ULONG64 包头, int 长度)
+{
+	Func_CALL(秘钥CALL, *(ULONG*)发包基址, 包头, 长度);
+}
+
+
+void 强制过图(int 房间横轴, int 房间纵轴)
+{
+	缓冲Call(45);
+	数值Call(房间横轴, 1);
+	数值Call(房间纵轴, 1);
+	数值Call(1465, 4);
+	数值Call(214, 4);
+	数值Call(0, 1);
+	数值Call(35812, 2);
+	数值Call(7, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(247, 2);
+	数值Call(30, 2);
+	数值Call(0, 2);
+	数值Call(0, 2);
+	数值Call(30, 2);
+	数值Call(11, 2);
+	数值Call(0, 2);
+	数值Call(0, 4);
+	数值Call(30, 2);
+	数值Call(41, 2);
+	数值Call(3, 2);
+	数值Call(250184, 8);
+	数值Call(24189, 4);
+	数值Call(0, 2);
+	数值Call(0, 1);
+	发包Call();
+}
+
+
+void 组包跳过()
+{
+	缓冲Call(1449);
+	发包Call();
+}
+
+void 组包回城()
+{
+	缓冲Call(42);
+	发包Call();
+}
+
+void 通关翻牌()
+{
+	缓冲Call(69);
+	发包Call();
+	缓冲Call(70);
+	发包Call();
+	缓冲Call(71);
+	数值Call(0, 1);
+	数值Call(0, 1);
+	发包Call();
+}
+
+
+void 领取奖励()
+{
+	缓冲Call(1426);
+	发包Call();
+}
+
+
+
+
+void 移动到云上长安门口()
+{
+	缓冲Call(36);
+	数值Call(126, 4);
+	数值Call(2, 1);
+	数值Call(26, 2);
+	数值Call(335, 2);
+
+	数值Call(5, 1);
+	数值Call(38, 4);
+	数值Call(2, 2);
+	数值Call(0, 4);
+	数值Call(0, 1);
+	发包Call();
+}
+
+void 云上进图(ULONG 思南位置)
+{
+
+	缓冲Call(1782);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 1);
+	数值Call(0, 1);
+	数值Call(思南位置, 4);
+	发包Call();
+
+	缓冲Call(1782);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(0, 4);
+	数值Call(1, 1);
+	数值Call(2, 1);
+	数值Call(思南位置, 4);
+	发包Call();
+
+}
+
+void 司南分解组包(ULONG 位置)
+{
+	缓冲Call(26);
+	数值Call(47, 1);
+	数值Call(-1, 2);
+	数值Call(400001144, 4);
+	数值Call(1, 1);
+	数值Call(位置, 2);
+	发包Call();
+}
+
+
+void 组包_城镇移动(区域型 副本编号)
+{
+	缓冲Call(36);
+	数值Call(副本编号.区域.x, 4);
+	数值Call(副本编号.区域.y, 1);
+	数值Call(副本编号.位置.x, 2);
+	数值Call(副本编号.位置.y, 2);
+	数值Call(5, 1);
+	数值Call(38, 4);
+	数值Call(2, 2);
+	数值Call(0, 4);
+	数值Call(0, 1);
 	发包Call();
 }

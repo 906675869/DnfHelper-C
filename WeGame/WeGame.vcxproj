@@ -29,14 +29,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -44,14 +44,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -184,6 +184,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
+    <ClInclude Include="剧情.h" />
+    <ClInclude Include="加密.h" />
+    <ClInclude Include="引用.h" />
+    <ClInclude Include="收包.h" />
+    <ClInclude Include="数组.h" />
+    <ClInclude Include="文件.h" />
+    <ClInclude Include="未央.h" />
     <ClInclude Include="结构.h" />
     <ClInclude Include="游戏Call.h" />
     <ClInclude Include="framework.h" />
@@ -205,8 +212,16 @@
     <ClInclude Include="读写.h" />
     <ClInclude Include="Api读写.h" />
     <ClInclude Include="Driver.h" />
+    <ClInclude Include="配置.h" />
+    <ClInclude Include="顺图.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="剧情.cpp" />
+    <ClCompile Include="加密.cpp" />
+    <ClCompile Include="劫持.cpp" />
+    <ClCompile Include="引用.cpp" />
+    <ClCompile Include="收包.cpp" />
+    <ClCompile Include="未央.cpp" />
     <ClCompile Include="游戏Call.cpp" />
     <ClCompile Include="寻路.cpp" />
     <ClCompile Include="组包.cpp" />
@@ -228,6 +243,8 @@
     <ClCompile Include="读写.cpp" />
     <ClCompile Include="Api读写.cpp" />
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="配置.cpp" />
+    <ClCompile Include="顺图.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WeGame.rc" />

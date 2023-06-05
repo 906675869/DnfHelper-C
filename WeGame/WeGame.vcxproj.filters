@@ -81,6 +81,33 @@
     <ClInclude Include="组包.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="引用.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="文件.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="加密.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="配置.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="收包.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="顺图.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="未央.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="剧情.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WeGame.cpp">
@@ -129,6 +156,30 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="组包.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="引用.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="加密.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="配置.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="劫持.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="收包.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="未央.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="顺图.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="剧情.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

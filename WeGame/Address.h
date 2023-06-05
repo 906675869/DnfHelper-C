@@ -712,3 +712,10 @@ constexpr auto 深红色基址 = 0xF00F00FF; //7度_获取
 constexpr auto 浅灰色基址 = 0xDDDDDDDD; //7度_获取
 constexpr auto 浅绿色基址 = 0xFF00FDDD; //7度_获取
 constexpr auto 咖啡色基址 = 0xDFDEFFFF; //7度_获取
+
+
+
+
+CONST ULONG64 玉荣偏移 = 0xC80;
+CONST ULONG64 装备名称 = 0xC8;
+CONST ULONG64 装备代码 = 0xC0;

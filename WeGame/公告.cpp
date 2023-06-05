@@ -4,6 +4,8 @@
 #include "读写.h"
 #include "公用.h"
 #include "游戏Call.h"
+#include "配置.cpp"
+#include "引用.h"
 
 static CEdit* windowPEdit;
 
@@ -24,8 +26,24 @@ VOID 监控(CString message)
 	GetWindowPEdit()->ReplaceSel(data);
 }
 
-VOID 神话公告(string message, int type) {
-	
+VOID 神话公告(wstring 内容, int 类型) {
+	LPCWSTR TempStr;
+	内容 = 配置.辅助名字 + L" " + 内容 + L" ";
+	TempStr = 内容.c_str();
+	ULONG64 公告数组[100] = { NULL };
+	*(ULONG64*)((ULONG64)公告数组 + 8) = (ULONG64)TempStr;
+	*(ULONG*)((ULONG64)公告数组 + 28) = -1;
+	*(ULONG*)((ULONG64)公告数组 + 32) = 淡绿色基址;  //颜色A
+	if (类型 == NULL)
+	{
+		*(ULONG*)((ULONG64)公告数组 + 36) = 38;  //普通
+	}
+	else
+	{
+		*(ULONG*)((ULONG64)公告数组 + 36) = 17;  //系统
+	}
+	*(ULONG*)((ULONG64)公告数组 + 108) = 55512;//颜色B
+	Func_CALL(神话CALL, (ULONG64)公告数组);
 }
 
 VOID 游戏公告(string message,int type) {
