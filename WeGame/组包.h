@@ -1,4 +1,5 @@
 #pragma once
+#include "结构.h"
 
 VOID 缓冲Call(__int64 缓冲参数);
 
@@ -50,4 +51,4 @@ void 云上进图(ULONG 思南位置);
 void 司南分解组包(ULONG 位置);
 
 
-void 组包_城镇移动(区域型 副本编号);
+void 组包城镇移动(区域型 副本编号);

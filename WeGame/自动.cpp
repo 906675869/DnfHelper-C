@@ -9,11 +9,11 @@
 #include "组包.h"
 #include "寻路.h"
 #include "配置.h"
-#include "游戏Call.cpp"
 #include "功能.h"
 #include "剧情.h"
 #include "未央.h"
 #include "顺图.h"
+#include "引用.h"
 
 // 自动开关
 static bool automaticSwitch;
@@ -238,9 +238,9 @@ void 获取角色处理(int 副本编号)
 	else
 	{
 
-		区域型 地方区域 = 获取区域(副本编号);
+		区域型 地方区域 = 获取副本区域(副本编号);
 
-		组包_城镇移动(地方区域);
+		组包城镇移动(地方区域);
 
 		组包选图();
 

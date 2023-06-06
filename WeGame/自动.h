@@ -9,3 +9,4 @@ VOID 返回角色();
 VOID 进入副本(int 副本编号, int 副本难度);
 VOID 模拟顺图();
 VOID 退出副本();
+void 更换角色();

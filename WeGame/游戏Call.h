@@ -1,5 +1,5 @@
 #pragma once
-#include "公用.h"
+#include "结构.h"
 
 VOID 汇编执行(ByteArr 汇编代码);
 
@@ -55,3 +55,5 @@ void 完成Call(int 任务编号, int 任务次数 = NULL);
 void 状态Call(int 数值, int 时间 = NULL);//1049 小金人 1134 霸体 1203 霸体 1202 无敌 1212 人物变大（无法攻击）
 
 void 玉荣Call(ULONG 新位置, ULONG 原位置);
+
+区域型 获取副本区域(int 副本编号);

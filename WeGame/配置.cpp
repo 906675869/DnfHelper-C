@@ -1,5 +1,6 @@
 #include "文件.h"
 #include "数组.h"
+#include "pch.h"
 
 配置数据 配置;
 
